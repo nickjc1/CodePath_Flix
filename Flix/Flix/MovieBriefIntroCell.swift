@@ -17,15 +17,14 @@ class MovieBriefIntroCell: UITableViewCell {
     
     var title: UILabel = {
         let title = UILabel()
-        title.text = "Test Title"
-        title.font = .boldSystemFont(ofSize: 20)
+        title.font = .boldSystemFont(ofSize: 15)
         title.textAlignment = .left
+        title.numberOfLines = 0
         return title
     }()
     
     var intro: UITextView = {
         let intro = UITextView()
-        intro.text = "This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!This is a test introduction of an ramdom movie. Hope it is working!"
         intro.isUserInteractionEnabled = false
         intro.textColor = .gray
         intro.textAlignment = .left
@@ -56,7 +55,7 @@ extension MovieBriefIntroCell {
         self.poster.translatesAutoresizingMaskIntoConstraints = false
         self.poster.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         self.poster.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
-        self.poster.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        self.poster.heightAnchor.constraint(equalToConstant: 120).isActive = true
         self.poster.widthAnchor.constraint(equalTo: self.poster.heightAnchor, multiplier: 9/16).isActive = true
     }
     
@@ -65,14 +64,14 @@ extension MovieBriefIntroCell {
         self.title.leadingAnchor.constraint(equalTo: self.poster.trailingAnchor, constant: 10).isActive = true
         self.title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
         self.title.topAnchor.constraint(equalTo: self.poster.topAnchor).isActive = true
-        self.title.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        self.title.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     
     func setupIntroConstraints() {
         self.intro.translatesAutoresizingMaskIntoConstraints = false
         self.intro.leadingAnchor.constraint(equalTo: self.title.leadingAnchor).isActive = true
         self.intro.trailingAnchor.constraint(equalTo: self.title.trailingAnchor).isActive = true
-        self.intro.topAnchor.constraint(equalTo: self.title.bottomAnchor, constant: 10).isActive = true
-        self.intro.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10).isActive = true
+        self.intro.topAnchor.constraint(equalTo: self.title.bottomAnchor).isActive = true
+        self.intro.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20).isActive = true
     }
 }
