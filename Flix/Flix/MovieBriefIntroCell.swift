@@ -12,6 +12,7 @@ class MovieBriefIntroCell: UITableViewCell {
     var poster: UIImageView = {
         let poster = UIImageView()
         poster.backgroundColor = .blue
+        poster.contentMode = .scaleAspectFill
         return poster
     }()
     

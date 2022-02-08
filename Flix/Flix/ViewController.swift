@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieListViewController: UIViewController {
     
@@ -21,7 +22,7 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Now playing"
+        self.title = "Now Playing"
         self.networkConnecting()
         
         //add and configure the movielist tableview into movielist viewcontroller
@@ -50,7 +51,11 @@ extension MovieListViewController: UITableViewDataSource {
         cell.title.text = movieTitle
         guard let overview = movies[indexPath.row]["overview"] as? String else {return cell}
         cell.intro.text = overview
-        
+        guard let poster_path = movies[indexPath.row]["poster_path"] as? String else {return cell}
+        let base_url = "https://image.tmdb.org/t/p/" + "w185"
+        if let posterUrl = URL(string: base_url + poster_path) {
+            cell.poster.af.setImage(withURL: posterUrl)
+        }
         return cell
     }
     
