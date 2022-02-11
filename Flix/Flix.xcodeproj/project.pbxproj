@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		DF46519C27B0AC8C00015E89 /* MovieBriefIntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */; };
+		DF47607E27B61D98000C127C /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */; };
 		DF8DBBED27B20EFF00EC1A80 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = DF8DBBEC27B20EFF00EC1A80 /* AlamofireImage */; };
 		DFF4489027AF78D800C797B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4488F27AF78D800C797B4 /* AppDelegate.swift */; };
 		DFF4489227AF78D800C797B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4489127AF78D800C797B4 /* SceneDelegate.swift */; };
-		DFF4489427AF78D800C797B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4489327AF78D800C797B4 /* ViewController.swift */; };
+		DFF4489427AF78D800C797B4 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4489327AF78D800C797B4 /* MovieListViewController.swift */; };
 		DFF4489927AF78D900C797B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF4489827AF78D900C797B4 /* Assets.xcassets */; };
 		DFF4489C27AF78D900C797B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF4489A27AF78D900C797B4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBriefIntroCell.swift; sourceTree = "<group>"; };
+		DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		DFF4488C27AF78D800C797B4 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4488F27AF78D800C797B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF4489127AF78D800C797B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFF4489327AF78D800C797B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DFF4489327AF78D800C797B4 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		DFF4489827AF78D900C797B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFF4489B27AF78D900C797B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFF4489D27AF78D900C797B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +62,9 @@
 			children = (
 				DFF4488F27AF78D800C797B4 /* AppDelegate.swift */,
 				DFF4489127AF78D800C797B4 /* SceneDelegate.swift */,
-				DFF4489327AF78D800C797B4 /* ViewController.swift */,
+				DFF4489327AF78D800C797B4 /* MovieListViewController.swift */,
 				DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */,
+				DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */,
 				DFF4489827AF78D900C797B4 /* Assets.xcassets */,
 				DFF4489A27AF78D900C797B4 /* LaunchScreen.storyboard */,
 				DFF4489D27AF78D900C797B4 /* Info.plist */,
@@ -145,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF47607E27B61D98000C127C /* MovieDetailsViewController.swift in Sources */,
 				DF46519C27B0AC8C00015E89 /* MovieBriefIntroCell.swift in Sources */,
-				DFF4489427AF78D800C797B4 /* ViewController.swift in Sources */,
+				DFF4489427AF78D800C797B4 /* MovieListViewController.swift in Sources */,
 				DFF4489027AF78D800C797B4 /* AppDelegate.swift in Sources */,
 				DFF4489227AF78D800C797B4 /* SceneDelegate.swift in Sources */,
 			);

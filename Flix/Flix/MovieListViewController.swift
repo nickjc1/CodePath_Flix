@@ -15,9 +15,7 @@ class MovieListViewController: UIViewController {
         tableView.register(MovieBriefIntroCell.self, forCellReuseIdentifier: "MovieBriefIntroCell")
         return tableView
     }()
-    
     var movies = [[String:Any]]()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +28,19 @@ class MovieListViewController: UIViewController {
         setMovieListTBViewDelegate()
         configureMovieListTBView()
     }
+
+}
+
+extension MovieListViewController: UITableViewDelegate {
     
     func setMovieListTBViewDelegate() {
         self.movieListTBView.delegate = self
         self.movieListTBView.dataSource = self
     }
-
+    
 }
 
-extension MovieListViewController: UITableViewDelegate {}
+
 extension MovieListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,8 +61,20 @@ extension MovieListViewController: UITableViewDataSource {
         return cell
     }
     
+    //select the certain row of tableview to go to next viewcontroller
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        navigationController?.modalPresentationStyle = .fullScreen
+//        present(MovieDetailsViewController(), animated: true)
+        
+        let movieDetailViewController = MovieDetailsViewController()
+        movieDetailViewController.movie = self.movies[indexPath.row]
+        self.navigationController?.pushViewController(movieDetailViewController, animated: true)
+        
+        self.movieListTBView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
 }
-
 
 
 extension MovieListViewController {
@@ -80,6 +94,7 @@ extension MovieListViewController {
         
     }
 }
+
 
 extension MovieListViewController {
     func networkConnecting() {

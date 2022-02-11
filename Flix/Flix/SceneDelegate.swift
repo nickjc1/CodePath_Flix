@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         let navigationController = UINavigationController(rootViewController: MovieListViewController())
-
+        navigationController.navigationBar.prefersLargeTitles = true
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
