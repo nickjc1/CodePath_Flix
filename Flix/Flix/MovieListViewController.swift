@@ -20,7 +20,7 @@ class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Now Playing"
+        self.navigationItem.title = "Now Playing"
         self.networkConnecting()
         
         //add and configure the movielist tableview into movielist viewcontroller
@@ -30,6 +30,7 @@ class MovieListViewController: UIViewController {
     }
 
 }
+
 
 extension MovieListViewController: UITableViewDelegate {
     
@@ -61,15 +62,15 @@ extension MovieListViewController: UITableViewDataSource {
         return cell
     }
     
-    //select the certain row of tableview to go to next viewcontroller
+//select the certain row of tableview to go to next viewcontroller
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
 //        navigationController?.modalPresentationStyle = .fullScreen
 //        present(MovieDetailsViewController(), animated: true)
         
         let movieDetailViewController = MovieDetailsViewController()
         movieDetailViewController.movie = self.movies[indexPath.row]
-        self.navigationController?.pushViewController(movieDetailViewController, animated: true)
-        
+        self.navigationController?.pushViewController(movieDetailViewController, animated: true)        
         self.movieListTBView.deselectRow(at: indexPath, animated: true)
         
     }

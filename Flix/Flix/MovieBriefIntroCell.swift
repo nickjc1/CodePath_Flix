@@ -32,7 +32,6 @@ class MovieBriefIntroCell: UITableViewCell {
         intro.isScrollEnabled = false
         intro.backgroundColor = .clear
         return intro
-        
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
