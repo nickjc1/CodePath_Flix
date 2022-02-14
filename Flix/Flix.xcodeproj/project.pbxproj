@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF12925527B9A73A00FDDC19 /* SuperHeroPostersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12925427B9A73A00FDDC19 /* SuperHeroPostersViewController.swift */; };
+		DF12925727B9B47000FDDC19 /* SuperHeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12925627B9B47000FDDC19 /* SuperHeroCollectionViewCell.swift */; };
+		DF12925B27B9D31C00FDDC19 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12925A27B9D31C00FDDC19 /* FetchData.swift */; };
 		DF46519C27B0AC8C00015E89 /* MovieBriefIntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */; };
 		DF47607E27B61D98000C127C /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */; };
 		DF8DBBED27B20EFF00EC1A80 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = DF8DBBEC27B20EFF00EC1A80 /* AlamofireImage */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF12925427B9A73A00FDDC19 /* SuperHeroPostersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroPostersViewController.swift; sourceTree = "<group>"; };
+		DF12925627B9B47000FDDC19 /* SuperHeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF12925A27B9D31C00FDDC19 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBriefIntroCell.swift; sourceTree = "<group>"; };
 		DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		DFF4488C27AF78D800C797B4 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF12925827B9B48000FDDC19 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DF12925427B9A73A00FDDC19 /* SuperHeroPostersViewController.swift */,
+				DF12925627B9B47000FDDC19 /* SuperHeroCollectionViewCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		DF12925927B9B4B000FDDC19 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				DFF4489327AF78D800C797B4 /* MovieListViewController.swift */,
+				DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
 		DFF4488327AF78D800C797B4 = {
 			isa = PBXGroup;
 			children = (
@@ -62,9 +86,10 @@
 			children = (
 				DFF4488F27AF78D800C797B4 /* AppDelegate.swift */,
 				DFF4489127AF78D800C797B4 /* SceneDelegate.swift */,
-				DFF4489327AF78D800C797B4 /* MovieListViewController.swift */,
-				DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */,
+				DF12925927B9B4B000FDDC19 /* ListView */,
+				DF12925827B9B48000FDDC19 /* CollectionView */,
 				DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */,
+				DF12925A27B9D31C00FDDC19 /* FetchData.swift */,
 				DFF4489827AF78D900C797B4 /* Assets.xcassets */,
 				DFF4489A27AF78D900C797B4 /* LaunchScreen.storyboard */,
 				DFF4489D27AF78D900C797B4 /* Info.plist */,
@@ -148,11 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF12925727B9B47000FDDC19 /* SuperHeroCollectionViewCell.swift in Sources */,
 				DF47607E27B61D98000C127C /* MovieDetailsViewController.swift in Sources */,
 				DF46519C27B0AC8C00015E89 /* MovieBriefIntroCell.swift in Sources */,
 				DFF4489427AF78D800C797B4 /* MovieListViewController.swift in Sources */,
 				DFF4489027AF78D800C797B4 /* AppDelegate.swift in Sources */,
 				DFF4489227AF78D800C797B4 /* SceneDelegate.swift in Sources */,
+				DF12925B27B9D31C00FDDC19 /* FetchData.swift in Sources */,
+				DF12925527B9A73A00FDDC19 /* SuperHeroPostersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

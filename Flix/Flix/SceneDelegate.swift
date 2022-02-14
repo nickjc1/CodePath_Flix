@@ -23,10 +23,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         let movieListViewController = MovieListViewController()
-        let navigationController = UINavigationController(rootViewController: movieListViewController)
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.prefersLargeTitles = true
-        window?.rootViewController = navigationController
+        movieListViewController.title = "Now Playing"
+        let movieListNavigationController = UINavigationController(rootViewController: movieListViewController)
+        movieListNavigationController.navigationBar.isTranslucent = true
+        movieListNavigationController.navigationBar.prefersLargeTitles = true
+        
+        let superHeroPostersViewController = SuperHeroPostersViewController()
+        superHeroPostersViewController.title = "Superhero"
+        let superHeroNavigationController = UINavigationController(rootViewController: superHeroPostersViewController)
+        superHeroNavigationController.navigationBar.isTranslucent = true
+        superHeroNavigationController.navigationBar.prefersLargeTitles = true
+        
+        let tapBarController = UITabBarController()
+        tapBarController.setViewControllers([movieListNavigationController, superHeroNavigationController], animated: true)
+        if let tapBarIcons = tapBarController.tabBar.items {
+            tapBarIcons[0].image = UIImage(named: "now_playing_tabbar_item")
+            tapBarIcons[1].image = UIImage(named: "superhero_tabbar_item")
+        }
+        
+        
+        window?.rootViewController = tapBarController
         
     }
 
