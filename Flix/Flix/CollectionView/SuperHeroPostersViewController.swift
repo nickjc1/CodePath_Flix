@@ -55,6 +55,12 @@ extension SuperHeroPostersViewController: UICollectionViewDataSource {
         }
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieDetailsViewController = MovieDetailsViewController()
+        movieDetailsViewController.movie = self.movies[indexPath.item]
+        self.navigationController?.pushViewController(movieDetailsViewController, animated: true)
+    }
 }
 
 
@@ -88,7 +94,7 @@ extension SuperHeroPostersViewController {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 guard let movies = dataDictionary["results"] as? [[String:Any]] else {return}
                 self.movies = movies
-                print(self.movies)
+//                print(self.movies)
                 self.superHeroMvCollectionView.reloadData()
             }
         }

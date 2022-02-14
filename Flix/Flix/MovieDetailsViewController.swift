@@ -59,7 +59,6 @@ class MovieDetailsViewController: UIViewController, UINavigationControllerDelega
 
 extension MovieDetailsViewController {
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,6 +89,13 @@ extension MovieDetailsViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.dismiss(animated: true, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
+        print("dismissed")
     }
 }
 
