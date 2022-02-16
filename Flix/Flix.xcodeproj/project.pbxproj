@@ -12,6 +12,7 @@
 		DF12925B27B9D31C00FDDC19 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF12925A27B9D31C00FDDC19 /* FetchData.swift */; };
 		DF46519C27B0AC8C00015E89 /* MovieBriefIntroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */; };
 		DF47607E27B61D98000C127C /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */; };
+		DF82534027BC9BBF00F3C86D /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82533F27BC9BBF00F3C86D /* TrailerViewController.swift */; };
 		DF8DBBED27B20EFF00EC1A80 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = DF8DBBEC27B20EFF00EC1A80 /* AlamofireImage */; };
 		DFF4489027AF78D800C797B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4488F27AF78D800C797B4 /* AppDelegate.swift */; };
 		DFF4489227AF78D800C797B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF4489127AF78D800C797B4 /* SceneDelegate.swift */; };
@@ -26,6 +27,7 @@
 		DF12925A27B9D31C00FDDC19 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		DF46519B27B0AC8C00015E89 /* MovieBriefIntroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBriefIntroCell.swift; sourceTree = "<group>"; };
 		DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		DF82533F27BC9BBF00F3C86D /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
 		DFF4488C27AF78D800C797B4 /* Flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF4488F27AF78D800C797B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF4489127AF78D800C797B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				DF12925927B9B4B000FDDC19 /* ListView */,
 				DF12925827B9B48000FDDC19 /* CollectionView */,
 				DF47607D27B61D98000C127C /* MovieDetailsViewController.swift */,
+				DF82533F27BC9BBF00F3C86D /* TrailerViewController.swift */,
 				DF12925A27B9D31C00FDDC19 /* FetchData.swift */,
 				DFF4489827AF78D900C797B4 /* Assets.xcassets */,
 				DFF4489A27AF78D900C797B4 /* LaunchScreen.storyboard */,
@@ -181,6 +184,7 @@
 				DFF4489227AF78D800C797B4 /* SceneDelegate.swift in Sources */,
 				DF12925B27B9D31C00FDDC19 /* FetchData.swift in Sources */,
 				DF12925527B9A73A00FDDC19 /* SuperHeroPostersViewController.swift in Sources */,
+				DF82534027BC9BBF00F3C86D /* TrailerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

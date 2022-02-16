@@ -8,9 +8,10 @@
 import UIKit
 import AlamofireImage
 
-class MovieDetailsViewController: UIViewController, UINavigationControllerDelegate {
+class MovieDetailsViewController: UIViewController {
     
     var movie = [String:Any]()
+    var trailerKey = ""
     
     let movieBackImageView: UIImageView = {
         let imageView = UIImageView()
@@ -25,6 +26,7 @@ class MovieDetailsViewController: UIViewController, UINavigationControllerDelega
         imageView.backgroundColor = .systemBlue
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -84,6 +86,9 @@ extension MovieDetailsViewController {
         
         self.view.addSubview(movieDetailTextView)
         movieDetailTextViewConfiguration()
+        
+        let posterTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapPoster(_:)))
+        moviePosterImageView.addGestureRecognizer(posterTapGestureRecognizer)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -164,4 +169,40 @@ extension MovieDetailsViewController {
         movieDetailTextView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     
+}
+
+
+extension MovieDetailsViewController {
+    @objc func didTapPoster(_ sender: UITapGestureRecognizer) {
+        var movieIDStr: String = ""
+        guard let movieID = self.movie["id"] as? Int else {return}
+        movieIDStr = String(movieID)
+//        print(movieIDStr)
+        let urlString = "https://api.themoviedb.org/3/movie/\(movieIDStr)/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US"
+        
+        Fetch.fetchData(urlStr: urlString) { data, urlResponce, error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if let data = data {
+                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+                // TODO: Get the array of movies
+                guard let trailers = dataDictionary["results"] as? [[String:Any]] else {return}
+//                print(trailers)
+                // TODO: Store the movies in a property to use elsewhere
+                let trailerViewController = TrailerViewController()
+                for trailer in trailers {
+                    if let name = trailer["name"] as? String {
+                        if name.contains("Official") {
+                            trailerViewController.key = trailer["key"] as! String
+                            break
+                        }
+                    }
+                }
+                self.present(trailerViewController, animated: true, completion: nil)
+            }
+        }
+        print(self.trailerKey)
+        
+        
+    }
 }
